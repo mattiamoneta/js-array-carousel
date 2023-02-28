@@ -11,21 +11,63 @@
 .container{
     display: flex;
     align-items: center;
-    max-width: 768px;
+    max-width: 992px;
     margin: auto;
     height: 100vh;
 }
 
 .carousel{
-    position: relative;
-    width: 700px;
+    display: flex;
+    width: 100%;
     height: 300px;
     margin: auto;
 }
 
 .carousel .carousel-stack{
+    width: 70%;
+    height: 100%;
+}
+
+.carousel .carousel-control{
+    position: relative;
+    width: 30%;
+    height: 100%;
+}
+
+.carousel-control .carousel-thumbnails{
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.thumbnail-wrapper{
+    position: relative;
+    width: 100%;
+    height: 60px;
+}
+
+.thumbnail-overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.thumbnail{
     width: 100%;
     height: 100%;
+    object-fit: cover;
+}
+
+.thumbnail-wrapper.current{
+    background-color: transparent;
+    border: 2px solid white;
+}
+
+.thumbnail-wrapper.current .thumbnail-overlay{
+    background-color: transparent;
 }
 
 img.carousel-img{
