@@ -3,7 +3,8 @@ const imagesList = [
     './img/2.webp',
     './img/3.webp',
     './img/4.webp',
-    './img/5.webp'
+    './img/5.webp',
+
 ];
 
 let activeItem = 0;
@@ -22,6 +23,7 @@ for (let i = 0; i < imagesList.length; i++){
 
 domCarouselStack.innerHTML = carouselStackInner;
 domCarouselThumbnails.innerHTML = carouselThumbnailsInner;
+
 
 const domCarouselItems = document.getElementsByClassName('carousel-img');
 const domThumbnailItems = document.getElementsByClassName('thumbnail-wrapper');
