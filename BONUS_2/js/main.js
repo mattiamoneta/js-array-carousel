@@ -26,7 +26,7 @@ domBtnPrev.classList.add('hide');
 // Click bottone avanti
 domBtnNext.addEventListener('click',function(){
    
-    if (activeItem <= domCarouselItems.length - 1){
+    if (activeItem < domCarouselItems.length - 1){
         domCarouselItems[activeItem].classList.remove('current');
         activeItem++;
         domCarouselItems[activeItem].classList.add('current');

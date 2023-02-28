@@ -21,22 +21,19 @@ domCarouselStack.innerHTML = carouselStackInner;
 
 const domCarouselItems = document.getElementsByClassName('carousel-img');
 domCarouselItems[activeItem].classList.add('current');
-domBtnPrev.classList.add('hide');
 
 // Click bottone avanti
 domBtnNext.addEventListener('click',function(){
    
-    if (activeItem <= domCarouselItems.length - 1){
+    if (activeItem < domCarouselItems.length - 1){
         domCarouselItems[activeItem].classList.remove('current');
         activeItem++;
         domCarouselItems[activeItem].classList.add('current');
-        domBtnNext.classList.remove('hide');
-        domBtnPrev.classList.remove('hide');
-        
-        if (activeItem == domCarouselItems.length - 1){
-            domBtnNext.classList.add('hide');
-        }
 
+    } else if (activeItem == domCarouselItems.length - 1){
+        domCarouselItems[activeItem].classList.remove('current');
+        activeItem = 0;
+        domCarouselItems[activeItem].classList.add('current');
     }
 
 });
@@ -48,13 +45,11 @@ domBtnPrev.addEventListener('click',function(){
         domCarouselItems[activeItem].classList.remove('current');
         activeItem--;
         domCarouselItems[activeItem].classList.add('current');
-        domBtnNext.classList.remove('hide');
-        domBtnPrev.classList.remove('hide');
-        
-        if (activeItem == 0){
-            domBtnPrev.classList.add('hide');
-        }
 
+    } else if (activeItem == 0){
+        domCarouselItems[activeItem].classList.remove('current');
+        activeItem = domCarouselItems.length - 1;
+        domCarouselItems[activeItem].classList.add('current');
     }
 
 });
