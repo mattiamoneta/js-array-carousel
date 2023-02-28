@@ -69,11 +69,15 @@ img.carousel-img.current{
 
 #btnPrev{top: 10px;}
 
+#btnPrev.hide{display: none;}
+
 #btnPrev:hover i{
     margin-bottom: 10px;
 }
 
 #btnNext{bottom: 10px;}
+
+#btnNext.hide{display: none;}
 
 #btnNext:hover i{
     margin-top: 10px;
