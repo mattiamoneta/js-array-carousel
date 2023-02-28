@@ -36,14 +36,15 @@
 
 .carousel-control .carousel-thumbnails{
     display: flex;
-    align-items: stretch;
     flex-wrap: wrap;
+    height: 100%;
+    background-color: red;
 }
 
 .thumbnail-wrapper{
     position: relative;
     width: 100%;
-    height: 60px;
+    height: calc(100% / 5);
 }
 
 .thumbnail-overlay{
